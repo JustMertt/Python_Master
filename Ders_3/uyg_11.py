@@ -1,6 +1,6 @@
 import cv2
 
-yol="Ders_3/Resimler/Adsiz-tasarim-2024-06-15T101601.722.jpg"
+yol="Ders_3\Resimler\Adsiz-tasarim-2024-06-15T101601.722 copy.jpg"
 resim=cv2.imread(yol)
 cv2.imshow("At",resim)
 
