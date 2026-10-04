@@ -15,7 +15,7 @@ cv2.circle(resim,(130,568),40,(255,0,0),5)
 
 
 
-cv2.putText(resim,"AT",(400,400),cv2.FONT_ITALIC,1,(255,255,0),2,cv2.LINE_8)
+cv2.putText(resim,"AT",(400,70),cv2.FONT_ITALIC,1,(0,0,255),2,cv2.LINE_8)
 cv2.imshow("kareli at", resim)
 
 

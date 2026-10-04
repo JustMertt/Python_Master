@@ -2,7 +2,7 @@ import cv2
 
 yol="Ders_3\Resimler\Adsiz-tasarim-2024-06-15T101601.722 copy.jpg"
 resim=cv2.imread(yol)
-soru= input("Ne eklemek istersiniz(daire/kare): ")
+soru= input("Ne eklemek istersiniz(daire/kare/yazı): ")
 def kare():
     kare_p1_x=int(input("Lütfen p1x kenarını giriniz"))
     kare_p1_y=int(input("Lütfen p1y kenarını giriniz"))
@@ -17,6 +17,10 @@ def daire():
     daire_kalinlik=int(input("Dairenin çizgi kalınlığını giriniz(içi dolu olması için -1): "))
 
     cv2.circle(resim,(daire_merkez_x,daire_merkez_y),daire_yaricap,(255,0,0),daire_kalinlik)
+def yazi():
+    metin=input("Görmek istediğiniz yazıyı giriniz: ")
+    cv2.putText(resim,metin,(400,50),cv2.FONT_ITALIC,1,(0,0,255),2,cv2.LINE_8)
+
 
 
 if soru == "kare":
@@ -25,7 +29,9 @@ if soru == "kare":
 elif soru == "daire":
     daire()
     cv2.imshow("at", resim)
-
+elif soru == "yazı":
+    yazi()
+    cv2.imshow("at",resim)
 
 
 
